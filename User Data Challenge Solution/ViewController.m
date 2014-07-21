@@ -18,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.users = [CCUserData users];
+    
+    for (NSDictionary *userData in [CCUserData users]) {
+        NSLog(@"%@", userData);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
